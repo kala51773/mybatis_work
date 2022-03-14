@@ -1,0 +1,3 @@
+# mybatis_work
+mybatis作业简单实现增删改查
+理论上clone下来可以直接用
