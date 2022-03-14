@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.companyMapper">
+    <select id="getcompanyList" resultType="pojo.company" >
+        select * from mybatis.company;
+    </select>
+    <select id="getuserbyid" resultType="pojo.company" parameterType="java.math.BigDecimal">
+        select * from  mybatis.company where id=#{id};
+    </select>
+    <insert id="adduser" parameterType="pojo.company">
+        insert into mybatis.company (id,name,sex,job,sal) values (#{id},#{name},#{sex},#{job},#{sal})
+    </insert>
+    <update id="updateuser" parameterType="pojo.company">
+        update mybatis.company set name=#{name} ,id=#{id},sex =#{sex},job=#{job},sal=#{sal} where id=#{id};
+    </update>
+    <delete id="deleteuser" parameterType="java.math.BigDecimal">
+        delete  from mybatis.company where id = #{id};
+    </delete>
+</mapper>
